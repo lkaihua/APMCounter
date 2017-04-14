@@ -26,7 +26,7 @@ ms_action_counter=0  	;mouse
 kb_action_counter=0 	;keyboard
 action_counter=0		;total
 start_time := A_TickCount
-SplashTextOn, 200,100, APM Helper, `nGLHF`n`nCounter Starts
+SplashTextOn, 200,100, APM Counter, `nGLHF`n`nCounter Starts
 Sleep 1000
 SplashTextOff
 return
@@ -148,7 +148,7 @@ time := A_TickCount - start_time
 time := Round(time/60/1000  ,2)    ; ms --> minute
 action_counter := ms_action_counter + kb_action_counter
 apm := Round(action_counter / time, 2)
-MsgBox, 4, APM Helper,GG!`nAPM = %apm%`n`n==== Details ====`nKeyboard`t= %kb_action_counter%`nMouse`t= %ms_action_counter%`nTotal`t= %action_counter%`nTime`t= %time% mins 
+MsgBox, 0, APM Counter,GG!`nAPM = %apm%`n`n==== Details ====`nKeyboard`t= %kb_action_counter%`nMouse`t= %ms_action_counter%`nTotal`t= %action_counter%`nTime`t= %time% mins 
 return
 
 
